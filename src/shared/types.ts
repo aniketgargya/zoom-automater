@@ -1,7 +1,5 @@
 import { Literal, Record, Boolean, Static, String, Number, Array } from "runtypes";
 
-export { Number } from "runtypes";
-
 export const ZoomClass = Record({
     name: String,
     link: String,
@@ -41,3 +39,9 @@ export const SetZoomClasses = Record({
     payload: ZoomClasses
 });
 export type SetZoomClasses = Static<typeof SetZoomClasses>;
+
+export const TabInfo = Record({
+    windowId: Number,
+    tabs: Number
+});
+export type TabInfo = Static<typeof TabInfo>;

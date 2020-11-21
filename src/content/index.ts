@@ -1,5 +1,5 @@
-import { defaultSettings } from "../shared/defaults";
-import { Settings } from "../shared/types";
+import { defaultSettings, defaultTabInfo } from "../shared/defaults";
+import { Settings, TabInfo } from "../shared/types";
 import "regenerator-runtime/runtime.js";
 import _ from "lodash";
 
@@ -12,6 +12,7 @@ const main = async () => {
 
     if (window.location.href.includes("zoom.us")) {
         let settings: Settings = _.cloneDeep(defaultSettings);
+        let tabInfo: TabInfo = _.cloneDeep(defaultTabInfo);
         const intervals: number[] = [];
 
         const port = chrome.runtime.connect({ name: "SETTINGS_PORT" });
@@ -21,6 +22,11 @@ const main = async () => {
                 case "RECEIVE_SETTINGS":
                     try {
                         settings = Settings.check(request.payload);
+                        break;
+                    } catch (e) {}
+                case "RECEIVE_TAB_INFO":
+                    try {
+                        tabInfo = TabInfo.check(request.payload);
                         break;
                     } catch (e) {}
             }
@@ -56,6 +62,7 @@ const main = async () => {
         const leaveZoom = () => {
             for (let i = 0; i < intervals.length; i++) window.clearInterval(intervals[i]);
             window.setInterval(async () => {
+                port.postMessage({ action: "HIGHLIGHT_TAB", payload: tabInfo });
                 leaveButton?.click();
                 await sleep(100);
                 document.querySelector<HTMLElement>(".leave-meeting-options__btn")?.click();
