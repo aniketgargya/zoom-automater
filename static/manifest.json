@@ -1,5 +1,5 @@
 {
-    "name": "Aniket's Zoom Automation",
+    "name": "Zoom Automation",
     "version": "1.1",
     "manifest_version": 2,
     "content_scripts": [
