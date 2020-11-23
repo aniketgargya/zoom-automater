@@ -1,6 +1,6 @@
 import React, { useState, FC } from "react";
 import { AppBar, Tab, Tabs, Box } from "@material-ui/core";
-import { SettingsMenu, ClassList, AddClasses } from ".";
+import { SettingsMenu, ClassList, AddClasses, AdditionalInfo } from ".";
 
 interface MiniPageProps {
     currentTab: number;
@@ -23,6 +23,10 @@ const tabs = [
     {
         label: "Add Classes",
         component: <AddClasses />
+    },
+    {
+        label: "Additional Info",
+        component: <AdditionalInfo />
     }
 ];
 
