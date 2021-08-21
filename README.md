@@ -28,8 +28,8 @@ When you join a Zoom room through the browser, ensure that the window is large e
 
 A couple seconds after you join the Zoom room, the leave button and the participant count should turn blue. If they do not, you can refresh the page (this will not kick you out of the Zoom room).
 
-<!-- ![Settings Tab](./README/settings.jpg | width=100)
-![Settings Tab](./README/classlist.jpg) -->
-<img src="./README/settings.jpg" alt="Settings Tab" width="25%" />
-<img src="./README/classlist.jpg" alt="Class List" width="25%" />
-<img src="./README/addclasses.jpg" alt="Add Classes" width="25%" />
+## Screenshots
+
+<img src="./README/settings.jpg" alt="Settings Tab" width="33%" />
+<img src="./README/classlist.jpg" alt="Class List" width="33%" />
+<img src="./README/addclasses.jpg" alt="Add Classes" width="33%" />
