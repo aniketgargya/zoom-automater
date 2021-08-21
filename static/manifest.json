@@ -1,10 +1,10 @@
 {
     "name": "Zoom Automation",
-    "version": "1.1",
+    "version": "1.2",
     "manifest_version": 2,
     "content_scripts": [
         {
-            "matches": ["<all_urls>"],
+            "matches": ["https://*.zoom.us/*"],
             "js": ["content.js"]
         }
     ],
@@ -17,6 +17,6 @@
     },
     "permissions": ["storage", "tabs"],
     "icons": {
-        "128": "icons/zoom.png"
+        "128": "icons/icon.png"
     }
 }
