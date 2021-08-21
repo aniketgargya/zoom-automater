@@ -55,7 +55,7 @@
         "tabWidth": 4,
         "singleQuote": false,
         "trailingComma": "none",
-        "noSemi": true
+        "semi": true
     },
     "husky": {
         "hooks": {
