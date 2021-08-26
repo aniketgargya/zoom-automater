@@ -8,9 +8,9 @@ Zoom Automator is a Chrome Extension that lets you automatically leave a Zoom ro
 
 To install Zoom Automator follow these steps:
 
-1. Run the build command (`npm run build`) to create the distributable folder.
+1. Download the zip file from the [releases page](https://github.com/aniketgargya/zoom-automater/releases) and unzip it, or run the build command (`npm run build`), to create the distributable folder (`dist/`).
 1. In Chrome, navigate to [chrome://extensions](chrome://extensions), and turn on developer mode.
-1. Click on Load Unpacked and select the `dist` generated from `npm run build`.
+1. Click on "Load unpacked" button and select the `dist/` folder.
 1. Pin the extension by clicking the puzzle icon in the top right corner of Chrome.
 1. Click on the Zoom Automator icon to modify the settings (such as turning automation on).
 
