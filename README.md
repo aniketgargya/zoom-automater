@@ -22,7 +22,7 @@ In the popup that appears after clicking the Zoom Automator icon, switch to the 
 
 ## Troubleshooting
 
-This only works when you join a Zoom room through this browser on Chrome.
+This only works when you are using the browser version of Zoom in Chrome.
 
 When you join a Zoom room through the browser, ensure that the window is large enough to view the participant count and the leave meeting button.
 
