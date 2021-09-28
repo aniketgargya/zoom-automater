@@ -14,7 +14,7 @@ export const AdditionalInfo = () => (
                     "Make sure the window is regular sized, the leave button and participant count must be visible",
                     "The leave button and participant count should be blue a couple seconds after joining the meeting. If not, just refresh the page and it should work",
                     "If you have suggestions for future features, let me know",
-                    "Version: 1.1",
+                    "Version: 2.1",
                     "Created by Aniket, Idea by Collin"
                 ].map((listItem, i) => (
                     <ListItem key={i}>

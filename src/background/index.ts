@@ -5,7 +5,6 @@ import {
     SetSettings,
     Settings,
     SetZoomClasses,
-    TabInfo,
     ZoomClasses
 } from "../shared/types";
 import _ from "lodash";
@@ -64,22 +63,7 @@ chrome.runtime.onConnect.addListener(port => {
                             payload: settings
                         });
                         break;
-                    case "HIGHLIGHT_TAB":
-                        try {
-                            chrome.tabs.highlight(TabInfo.check(request.payload));
-                            break;
-                        } catch (e) {}
                 }
-            });
-
-            chrome.tabs.query({ active: true, currentWindow: true }, response => {
-                port.postMessage({
-                    action: "RECEIVE_TAB_INFO",
-                    payload: {
-                        windowId: response[0].windowId,
-                        tabs: response[0].index || 0
-                    } as TabInfo
-                });
             });
 
             settingsPorts.push(port);

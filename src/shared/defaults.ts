@@ -1,4 +1,4 @@
-import { Settings, TabInfo, ZoomClasses } from "./types";
+import { Settings, ZoomClasses } from "./types";
 
 export const defaultSettings = {
     type: "settings",
@@ -8,8 +8,3 @@ export const defaultSettings = {
 } as Settings;
 
 export const defaultZoomClasses = [] as ZoomClasses;
-
-export const defaultTabInfo = {
-    windowId: -1,
-    tabs: -1
-} as TabInfo;
